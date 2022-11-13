@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <title>Tic Tac Toe</title>
+</head>
+
+<body>
+  <div id="main">
+    <h1>TIC TAC TOE</h1>
+    <p id="welcome">Let's play! Project by ZM</p>
+
+    <!-- Welcome buttons container -->
+    <div id="welcomeButtons">
+      <button onclick="playVsComputer()" class="welcomeButton">Play vs computer</button>
+      <button onclick="playVsHuman()" class="welcomeButton">Play vs player</button>
+    </div>
+    <!-- End of welcome buttons container -->
+
+    <!-- Form for users -->
+    <form id="userForm" onsubmit="event.preventDefault(); saveUsers()">
+      <div>
+        <h6>
+          Insert first player name
+        </h6>
+        <input name="firstPlayer" id="firstPlayer" type="text" required />
+      </div>
+      <div id="secondPlayerInput">
+        <h6>
+          Insert second player name
+        </h6>
+        <input name="secondPlayer" id="secondPlayer" type="text" required />
+      </div>
+      <input type="submit" value="Save" />
+    </form>
+    <!-- End Form for users -->
+
+    <!-- Display names -->
+    <div id="playersName">
+      <div id="playerOneName">
+        <h2>Player one:</h2>
+        <h5 id="playerOne"></h5>
+      </div>
+      <div id="playerTwoName">
+        <h2>Player two:</h2>
+        <h5 id="playerTwo"></h5>
+      </div>
+    </div>
+    <!-- End of display names -->
+
+    <!-- Playground for playing vs computer -->
+    <div id="playgroundVsComputer">
+      <ul id="grid"></ul>
+    </div>
+    <!-- End of playground for playing vs computer -->
+
+    <!-- Playground for playing vs human -->
+    <div id="playgroundVsHuman">
+      <div id="playgroundVsHumanContent">
+        <input type="text" id="box1" onclick="playerTurn1(); boxclick();">
+        <input type="text" id="box2" onclick="playerTurn2(); boxclick();">
+        <input type="text" id="box3" onclick="playerTurn3(); boxclick();">
+        <input type="text" id="box4" onclick="playerTurn4(); boxclick();">
+        <input type="text" id="box5" onclick="playerTurn5(); boxclick();">
+        <input type="text" id="box6" onclick="playerTurn6(); boxclick();">
+        <input type="text" id="box7" onclick="playerTurn7(); boxclick();">
+        <input type="text" id="box8" onclick="playerTurn8(); boxclick();">
+        <input type="text" id="box9" onclick="playerTurn9(); boxclick();">
+      </div>
+    </div>
+    <!-- End of playground for playing vs computer -->
+
+
+    <!-- Bottom container -->
+    <div id="bottomContainer">
+      <button id="restart" onclick="restartGame()">RESET</button>
+      <h2 id="print"></h2>
+    </div>
+    <!-- End of Bottom container -->
+
+    <script src="game.js"></script>
+</body>
+
+</html>
